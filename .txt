@@ -1,0 +1,316 @@
+// User Role
+
+//User Role Object
+const userRoleObj = {
+  roleName: "User",
+  since: Date.now(),
+};
+
+// Create User Roll Method
+userRole
+  .newUserRoleMeth(userRoleObj)
+  .then((data) => {
+    console.log("UserRole saved:", data);
+  })
+  .catch((err) => {
+    console.error("Error saving UserRole:", err);
+  });
+
+// Read All Data Collection From UserRoll
+userRole
+  .allUserRoleMeth()
+  .then((data) => {
+    console.log("Read All User Role:", data);
+  })
+  .catch((err) => {
+    console.error("Error saving category:", err);
+  });
+
+// Find Id and Update Name Collection From UserRoll
+const updateUserRoleObj = {
+  _id: "64ee0badf4c0e77359f7d9ac",
+  roleName: "Premium User",
+};
+userRole
+  .updateUserRoleMeth(updateUserRoleObj)
+  .then((updatedUserRole) => {
+    console.log("UserRole updated:", updatedUserRole);
+  })
+  .catch((err) => {
+    console.error("Error updating UserRole:", err);
+  });
+
+// Find Id and Delete userRole Collection From UserRoll
+const userRoleIdToDelete = "64ee0badf4c0e77359f7d9ac";
+userRole
+  .userRoleDeleteMath(userRoleIdToDelete)
+  .then(() => {
+    console.log("UserRole deleted successfully");
+  })
+  .catch((err) => {
+    console.error("Error deleting UserRole:", err);
+  });
+
+=================================================================================================
+
+  // Admin Account
+
+//Admin Object
+const adminObj = {
+  userRole: "64ee0ae9e7e56ffb652178b6",
+  name: "Thu Yein Soe",
+  email: "thuyein@gmail.com",
+  password: "admin123",
+  percentage: 0,
+  unit: 1000000,
+  promotionUnit: 2000000,
+  image: "profile.png",
+  status: true,
+  since: new Date(),
+};
+
+// Create Admin Account Method
+adminColl
+  .newAdminMeth(adminObj)
+  .then((data) => {
+    console.log("Admin Account saved:", data);
+  })
+  .catch((err) => {
+    console.error("Error saving Admin Account:", err);
+  });
+
+// Read All Data Collection From Admins
+adminColl
+  .allAdminMeth()
+  .then((data) => {
+    console.log("Read All Admin:", data);
+  })
+  .catch((err) => {
+    console.error("Error Read Data:", err);
+  });
+
+// Find Id and Update Name Collection From UserRoll
+const updateAdminObj = {
+  _id: "64ee17c53c20ac79595097d1",
+  name: "Khin Wint Wah",
+};
+adminColl
+  .updateAdminAccMeth(updateAdminObj)
+  .then((updatedAdmin) => {
+    console.log("Admin Name updated:", updatedAdmin);
+  })
+  .catch((err) => {
+    console.error("Error updating :", err);
+  });
+
+// Find Id and Delete userRole Collection From UserRoll
+const adminAccIdToDelete = "64ee17c53c20ac79595097d1";
+adminColl
+  .adminDeleteMath(adminAccIdToDelete)
+  .then(() => {
+    console.log("Admin Account deleted successfully");
+  })
+  .catch((err) => {
+    console.error("Error deleting Admin Account:", err);
+  });
+
+==========================================================
+// User Account
+
+//User Object
+const userObj = {
+  userRole: "64ee14091aa7f2880ac31342",
+  name: "Wa Tote",
+  email: "watote@gmail.com",
+  password: "watoteABC",
+  percentage: 3,
+  unit: 100000,
+  promotionUnit: 500000,
+  image: "profile.png",
+  since: new Date(),
+};
+
+// Create User Account Method
+userColl
+  .newUserMeth(userObj)
+  .then((data) => {
+    console.log("User Account saved:", data);
+  })
+  .catch((err) => {
+    console.error("Error saving User Account:", err);
+  });
+
+// Read All Data Collection From Admins
+userColl
+  .allUserMeth()
+  .then((data) => {
+    console.log("Read All User:", data);
+  })
+  .catch((err) => {
+    console.error("Error Read Data:", err);
+  });
+
+// Find Id and Update Name Collection From UserRoll
+const updateUserObj = {
+  _id: "64ee1cabc749c33a29327515",
+  name: "Pwint",
+};
+userColl
+  .updateUserAccMeth(updateUserObj)
+  .then((updatedUser) => {
+    console.log("User Name updated:", updatedUser);
+  })
+  .catch((err) => {
+    console.error("Error updating :", err);
+  });
+
+// Find Id and Delete userRole Collection From UserRoll
+const adminAccIdToDelete = "64ee1cabc749c33a29327515";
+userColl
+  .userDeleteMath(adminAccIdToDelete)
+  .then(() => {
+    console.log("User Account deleted successfully");
+  })
+  .catch((err) => {
+    console.error("Error deleting User Account:", err);
+  });
+  ========================================================================
+  //Game Type Object
+const gameTypeObj = {
+  name: "Myanmar Cart Playground",
+  status: true,
+};
+
+// Create Game Type Method
+gameType
+  .newGameTypeMath(gameTypeObj)
+  .then((data) => {
+    console.log("GameType saved:", data);
+  })
+  .catch((err) => {
+    console.error("Error saving GameType:", err);
+  });
+
+// Read All Data Collection From gameType
+gameType
+  .allGameTypeMeth()
+  .then((data) => {
+    console.log("Read All Game Type:", data);
+  })
+  .catch((err) => {
+    console.error("Error saving Game Type:", err);
+  });
+
+// Find Id From Collection Of gameType
+const gameTypeFindById = "64ee25cfbca765eef6e82d4a";
+gameType
+  .findGameTypeById(gameTypeFindById)
+  .then((gameTypeById) => {
+    console.log("UserRole updated:", gameTypeById);
+  })
+  .catch((err) => {
+    console.error("Error updating UserRole:", err);
+  });
+  ==========================================================================================
+  //Game Type Provider Object
+const gameTypeProviderObj = {
+  gameTypeId: "64ee25cfbca765eef6e82d4a",
+  name: "Lottery 3D",
+  status: true,
+};
+
+// Create Game Type Provider Method
+gameTypeProvider
+  .newGameTypeProviderMath(gameTypeProviderObj)
+  .then((data) => {
+    console.log("GameTypeProvider saved:", data);
+  })
+  .catch((err) => {
+    console.error("Error saving GameTypeProvider:", err);
+  });
+
+// Read All Data Collection From gameTypeProvider
+gameTypeProvider
+  .allGameTypeProviderMeth()
+  .then((data) => {
+    console.log("Read All Game Type Provider:", data);
+  })
+  .catch((err) => {
+    console.error("Error saving Game Type Provider:", err);
+  });
+
+// Find Id From Collection Of gameType Provider
+const gameTypeProviderFindById = "64ee2b17c3a48f8672967e66";
+gameTypeProvider
+  .findGameTypeProviderById(gameTypeProviderFindById)
+  .then((gameTypeProviderById) => {
+    console.log("Game Type Provider updated:", gameTypeProviderById);
+  })
+  .catch((err) => {
+    console.error("Error updating Game Type Provider:", err);
+  });
+  ===============================================================================
+  Lottery Type
+
+  const lotteryTypeObj = {
+  gameTypeProviderId: "64ee2adca6b651f8762d470d",
+  name: "Myanmar 3D",
+  limitAmount: 0,
+  startTime: new Date(),
+  endTime: new Date(),
+  status: true,
+  multiplyX: 550,
+  roundValue: 0,
+};
+
+// Create Lottery Type Method
+LotteryType.newLotteryTypeMath(lotteryTypeObj)
+  .then((data) => {
+    console.log("GameTypeProvider saved:", data);
+  })
+  .catch((err) => {
+    console.error("Error saving GameTypeProvider:", err);
+  });
+
+// Read All Lottery Type Collection From lotteries
+LotteryType.allLotteryTypeMeth()
+  .then((data) => {
+    console.log("Read All Lottery Type:", data);
+  })
+  .catch((err) => {
+    console.error("Error saving Lottery Type:", err);
+  });
+
+// Find Id From Collection Of Lottery Type
+const lotteryTypeFindById = "64ee375dd60e3ada1d80bbc6";
+LotteryType.findLotteryTypeById(lotteryTypeFindById)
+  .then((lotteryTypeProviderById) => {
+    console.log("Lottery Type Provider updated:", lotteryTypeProviderById);
+  })
+  .catch((err) => {
+    console.error("Error Reading Lottery Type Provider:", err);
+  });
+
+  ===============================================================================
+  Lottery Pruduct / 2D Morning , 2D Evening , 3D Week
+
+  for (let i = 0; i < 1000; i++) {
+  //   let lotteryNum = i.toString().padStart(2, "0");
+  let lotteryNum = i.toString().padStart(3, "0");
+
+  //Lottery Number 2D Object
+  const lotteryNumObj = {
+    lotteryTypeId: "64ee375dd60e3ada1d80bbc6",
+    lotteryProductName: lotteryNum,
+    limitAmount: 20000,
+    status: true,
+  };
+
+  LotteryProduct.newLotteryNumMath(lotteryNumObj)
+    .then((data) => {
+      console.log("Lottery Number saved:", data);
+    })
+    .catch((err) => {
+      console.error("Error saving Lottery Number:", err);
+    });
+}
